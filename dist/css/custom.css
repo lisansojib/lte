@@ -1,0 +1,114 @@
+/* SideBar
+---------------------*/
+.btn-event-preset{width:100px!important;font-size:13px;}
+.sidebar .sidebar-datepicker { padding: 10px; }
+.sidebar .sidebar-datepicker .datepicker { background: #fff; margin-bottom: 10px; border-radius: 0; }
+.sidebar-datepicker .sd-select-options { width: 100%; display: inline-block; vertical-align: top; background: #fff; padding: 0 10px; border-bottom: 1px solid #ddd; }
+.sidebar-datepicker .sd-select-options .md-radio { width: 50%; float: left; margin: 10px 0; }
+
+
+.sidebar .user-panel { padding: 0 }
+.sidebar .user-panel .image { width: 100%; padding:5px 15px; }
+.sidebar .user-panel > .image > img { width: 100px; max-width: 100%; margin: 0 auto; display: block; }
+.sidebar .user-panel > .info { position: relative; left: auto; padding:0 15px 0; width: 100%; text-align: center; }
+.sidebar .user-panel > .info a {font-size: 14px; display: inline-block; line-height: normal;}
+.sidebar .user-panel .form-control { border-radius: 5px; height: 30px;  padding: 3px 8px; font-size: 13px;}
+.sidebar .form-group { width: 100%; display: inline-block; vertical-align: top; }
+.sidebar .form-group .form-control { width: 90px; float: left; }
+.sidebar .form-group .form-control.sb-online { margin-right:10px;  }
+
+
+
+.portlet-sortable-placeholder {
+    border: 2px dashed #999;
+    margin-bottom: 25px;
+}
+
+.min-height {
+	min-height: 600px;
+}
+.sidebar-toggle{
+	display: none;
+}
+@media (max-width: 767px) {
+	.sidebar-toggle{
+		display:block;
+	}
+}
+
+/* Radio and check box
+-------------------------- */
+@keyframes ripple {
+  0% {
+    box-shadow: 0px 0px 0px 1px transparent;
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px transparent;
+  }
+}
+.md-radio {
+  margin: 16px 0;
+}
+.md-radio.md-radio-inline {
+  display: inline-block;
+}
+
+.md-radio input[type="radio"],
+.md-checkbox input[type="checkbox"] {
+  display: none;
+}
+.md-radio input[type="radio"]:checked + label:before,
+.md-checkbox input[type="checkbox"]:checked + label:before {
+  border-color: #337ab7;
+  animation: ripple 0.2s linear forwards;
+}
+.md-radio input[type="radio"]:checked + label:after,
+.md-checkbox input[type="checkbox"]:checked + label:after {
+  transform: scale(1);
+}
+.md-radio label,
+.md-checkbox label {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  padding: 0 0 0 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+.md-radio label:before, 
+.md-radio label:after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  transition: all .3s ease;
+  transition-property: transform, border-color;
+}
+.md-checkbox label:before, 
+.md-checkbox label:after {
+  position: absolute;
+  content: '';
+  transition: all .3s ease;
+  transition-property: transform, border-color;
+}
+
+.md-radio label:before,
+.md-checkbox label:before {
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.54);
+}
+.md-radio label:after,
+.md-checkbox label:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  background: #337ab7;
+}
